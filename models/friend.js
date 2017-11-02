@@ -3,17 +3,16 @@ module.exports = function(sequelize, DataTypes) {
     name: {
       type: DataTypes.STRING,
     }
-
   },
   {
     timestamps: false
   });
 
-  Friend.associate = function(models) {
-    Friend.hasMany(models.Bet, {
-      onDelete: "cascade"
-    });
-  };
+  //Friend.associate = function(models) {
+  //  Friend.hasMany(models.Bet, {
+  //    onDelete: "cascade"
+  //  });
+  //};
 
   return Friend;
 };

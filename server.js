@@ -15,13 +15,8 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }))
 
 app.use(express.static("public"))
 
-//main route
-app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "/public/rcGrid.html"))
-})
-
-////other routes in models
-//require("./routes/friend-api-routes.js")(app)
+//routes in models
+require("./routes/friend-api-routes.js")(app)
 //require("./routes/bet-api-routes.js")(app)
 
 db.sequelize.sync({ force: true }).then(function () {
@@ -30,4 +25,8 @@ db.sequelize.sync({ force: true }).then(function () {
     })
 })
 
+//main route
+app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "/public/rcGrid.html"))
+})
 
