@@ -5,7 +5,7 @@ window.onload = function () {
     //load up friends
     for (var i = 0; i < friendArr.length; i++) {
         var friendButton = document.createElement('a')
-        friendButton.href = `/${friendArr[i]}`
+        friendButton.href = `/friend/${friendArr[i]}`
         friendButton.innerHTML = friendArr[i]
         appBody.appendChild(friendButton)
     }
