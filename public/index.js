@@ -12,33 +12,8 @@ window.onload = function () {
     //    appbody.appendchild(friendbutton)
     //}
 
-    //var xhr = new XMLHttpRequest()
-    //xhr.open('GET', '/api/friends')
-    //xhr.onload = function (data) {
-    //    if (xhr.status === 200) {
-    //        console.log(data.currentTarget.response)
-
-    //        friendArr = data.currentTarget.response
-    //        appBody = document.querySelector('.appbody')
-
-    //        //load up friends
-    //        for (var i = 0; i < friendArr.length; i++) {
-    //            var friendbutton = document.createElement('a')
-    //            friendbutton.href = `/friend/${friendArr[i]}`
-    //            friendbutton.innerHTML = friendArr[i]
-    //            appBody.appendChild(friendbutton)
-    //        }
-    //    }
-    //    else {
-    //        alert('Request failed.  Returned status of ' + xhr.status)
-    //    }
-    //};
-    //xhr.send()
-
-
     $.get("/api/friends", function (data) {
         console.log(data)
-
         loadData(data)
     })
 

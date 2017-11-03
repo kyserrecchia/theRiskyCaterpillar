@@ -1,8 +1,8 @@
 {
   "name": "theriskycaterpillar",
   "version": "1.0.0",
-  "description": "A simple betting web app for keeping running totals of 1 dollar bets with friends",
-  "main": "rcGrid.js",
+  "description": "A simple betting web-app for keeping running totals of 1 dollar bets with friends",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

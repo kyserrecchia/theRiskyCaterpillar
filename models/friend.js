@@ -8,11 +8,11 @@ module.exports = function(sequelize, DataTypes) {
     timestamps: false
   });
 
-  //Friend.associate = function(models) {
-  //  Friend.hasMany(models.Bet, {
-  //    onDelete: "cascade"
-  //  });
-  //};
+  Friend.associate = function(models) {
+    Friend.hasMany(models.Bet, {
+      onDelete: "cascade"
+    });
+  };
 
   return Friend;
 };
