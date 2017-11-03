@@ -30,7 +30,6 @@ window.onload = function () {
         }
     }
 
-
     //$.get("/api/friends", function (data) {
     //        console.log(data);
     //        //var rowsToAdd = [];

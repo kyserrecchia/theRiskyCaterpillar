@@ -1,7 +1,6 @@
 var db = require("../models")
 
 module.exports = function (app) {
-
     app.get("/api/friends", function (req, res) {
         db.Friend.findAll().then(function (dbFriend) {
             res.json(dbFriend)
